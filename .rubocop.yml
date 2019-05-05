@@ -1,0 +1,12 @@
+AllCops:
+  Exclude:
+    - 'Gemfile'
+    - 'Gemfile.lock'
+    - 'spec/rails_helper.rb'
+  
+  Metrics/LineLength:
+    Enabled: false
+    
+  Metrics/BlockLength:
+    Enabled: false
+  
