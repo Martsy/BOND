@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190506025449) do
+ActiveRecord::Schema.define(version: 20190506034255) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,9 @@ ActiveRecord::Schema.define(version: 20190506025449) do
     t.string "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "actor_id"
+    t.index ["actor_id"], name: "index_movies_on_actor_id"
   end
 
+  add_foreign_key "movies", "actors"
 end
